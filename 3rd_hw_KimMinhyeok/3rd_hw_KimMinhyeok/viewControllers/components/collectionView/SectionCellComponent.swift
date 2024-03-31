@@ -7,6 +7,7 @@
 
 import UIKit
 
+// SectionCell
 class SectionCellComponent: UICollectionViewCell {
     let imageView: UIImageView = {
         let imageView = UIImageView()

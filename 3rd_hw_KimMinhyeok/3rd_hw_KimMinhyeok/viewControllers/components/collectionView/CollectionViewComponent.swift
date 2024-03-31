@@ -7,6 +7,7 @@
 
 import UIKit
 
+// Sets of SectionHeader & CollectionView
 class CollectiViewComponent: UIView {
     
     override init(frame: CGRect) {
@@ -21,12 +22,15 @@ class CollectiViewComponent: UIView {
 
     private func setupUI() {
         
+        // number of sections
         let numberOfCollectionViews = ContentModel.ContentModelData.count
+            // 이전 section을 통해 autolayout 잡아주기 위함
             var previousSection: UICollectionView?
             
             for index in 0..<numberOfCollectionViews {
                 let sectionHeader = SectionHeaderComponent()
                 sectionHeader.translatesAutoresizingMaskIntoConstraints = false
+                // section의 첫 item의 category값으로 sectionHeader title 지정
                 let category = ContentModel.ContentModelData[index].first?.category ?? ""
                 sectionHeader.category.text = category
                 
@@ -42,12 +46,15 @@ class CollectiViewComponent: UIView {
                 
                 collectionView.delegate = self
                 collectionView.dataSource = self
+                //cell 등록
                 collectionView.register(SectionCellComponent.self, forCellWithReuseIdentifier: "Cell\(index)")
                 collectionView.tag = index
                 
+                // 동적 section 추가
                 self.addSubview(sectionHeader)
                 self.addSubview(collectionView)
                 
+                // constraints
                 NSLayoutConstraint.activate([
                     // sectionHeader
                     sectionHeader.topAnchor.constraint(equalTo: previousSection?.bottomAnchor ?? self.topAnchor),
@@ -71,10 +78,12 @@ class CollectiViewComponent: UIView {
 }
 
 extension CollectiViewComponent: UICollectionViewDelegate, UICollectionViewDataSource {
+    // item 수만큼 출력
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return ContentModel.ContentModelData[collectionView.tag].count
     }
 
+    // cell 설정
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell\(collectionView.tag)", for: indexPath) as? SectionCellComponent else {
             print("Unable to dequeue CollectionViewCellComponent")
@@ -85,7 +94,6 @@ extension CollectiViewComponent: UICollectionViewDelegate, UICollectionViewDataS
         if let image = UIImage(named: "\(content.image).jpeg") {
             cell.imageView.image = image
         } else {
-            // Handle the case when image is not found
             print("Image \(content.image) not found!")
         }
 
@@ -94,16 +102,19 @@ extension CollectiViewComponent: UICollectionViewDelegate, UICollectionViewDataS
 }
 
 extension CollectiViewComponent: UICollectionViewDelegateFlowLayout {
+    // cell layout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let cellWidth: CGFloat = 103
         let cellHeight: CGFloat =  161
         return CGSize(width: cellWidth, height: cellHeight)
     }
 
+    // cell spacing
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return 7
     }
 
+    // cell inset
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 0, left: 7, bottom: 0, right: 0)
     }

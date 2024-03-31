@@ -7,6 +7,7 @@
 
 import Foundation
 
+// category: sectionTitle, image: cell
 struct ContentModel{
     var category : String
     var image : String
@@ -16,6 +17,7 @@ struct ContentModel{
 
 extension ContentModel{
     
+    // CollectionViews data
     static var ContentModelData = [
         [
             ContentModel(category: "Popular on Netflix", image: "pard"),

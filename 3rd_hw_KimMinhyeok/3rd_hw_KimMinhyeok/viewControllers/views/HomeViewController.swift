@@ -11,46 +11,44 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.black
+        view.backgroundColor = UIColor.clear
         setUI()
     }
     
     func setUI(){
+        // scrollView
         let scrollView: UIScrollView = {
             let scrollView = UIScrollView()
+            scrollView.contentInsetAdjustmentBehavior = .never // safeArea 영역 무시 -> 상태바까지 scrollView가 채워질 수 있도록
             scrollView.translatesAutoresizingMaskIntoConstraints = false
             return scrollView
         }()
         
-        // contentView
+        // contentView (header, collecitonView)
         let contentView: UIView = {
             let contentView = UIView()
             contentView.translatesAutoresizingMaskIntoConstraints = false
             return contentView
         }()
         
+        // header
         let header = HeaderComponent()
         header.translatesAutoresizingMaskIntoConstraints = false
         
+        // collectionView
         let collectionView = CollectiViewComponent()
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         
+        // addSubview
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(header)
         contentView.addSubview(collectionView)
         
-        var statusHeight: CGFloat = 0
-        // 상태바 height 구하기
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene,
-            let statusBarManager = windowScene.statusBarManager {
-            statusHeight = statusBarManager.statusBarFrame.height
-        }
-        
         //constraints
         NSLayoutConstraint.activate([
             // scrollView
-            scrollView.topAnchor.constraint(equalTo: view.topAnchor, constant: -statusHeight),
+            scrollView.topAnchor.constraint(equalTo: view.topAnchor),
             scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor),

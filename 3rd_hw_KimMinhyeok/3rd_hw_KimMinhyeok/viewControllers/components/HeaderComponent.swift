@@ -7,6 +7,7 @@
 
 import UIKit
 
+// BackgroundImage + HeaderOfHeader + FooterOfHeader
 class HeaderComponent: UIView {
     
     override init(frame: CGRect) {
@@ -21,6 +22,7 @@ class HeaderComponent: UIView {
     private func setupUI() {
         self.backgroundColor = .clear
         
+        // backgroundImage
         let backgroundImage: UIImageView = {
             let backgroundImage = UIImageView()
             backgroundImage.image = UIImage(named: "header_background")
@@ -31,11 +33,11 @@ class HeaderComponent: UIView {
             return backgroundImage
         }()
         
-        // 상단 button들 (3개)
+        //  headerOfHeader: stackView
         let headerOfHeader: UIStackView = {
             let headerOfHeader = UIStackView()
-            headerOfHeader.axis = .horizontal
-            headerOfHeader.spacing = 40
+            headerOfHeader.axis = .horizontal // 가로 정렬
+            headerOfHeader.spacing = 40 // content간 간격: 40
             headerOfHeader.translatesAutoresizingMaskIntoConstraints = false
             
             let logo: UIImageView = {
@@ -65,28 +67,29 @@ class HeaderComponent: UIView {
                 }()
                 headerOfHeader.addArrangedSubview(button)
                 
-                // 40 spacing
                 button.heightAnchor.constraint(equalToConstant: 40).isActive = true
             }
             
             return headerOfHeader
         }()
         
+        // footerOfHeader
         let footerOfHeader: UIStackView = {
             let footerOfHeader = UIStackView()
-            footerOfHeader.axis = .horizontal
-            footerOfHeader.spacing = 42
-            footerOfHeader.alignment = .center
+            footerOfHeader.axis = .horizontal // 가로 정렬
+            footerOfHeader.spacing = 42 // contents간 간격: 42
+            footerOfHeader.alignment = .center // 수직 정렬
             footerOfHeader.translatesAutoresizingMaskIntoConstraints = false
             
             let btnMyList: UIButton = {
+                // configuration: Button안 image, title 공존 및 기타 설정을 위함
                 var configuration = UIButton.Configuration.filled()
                 configuration.background.backgroundColor = .clear
                 configuration.title = "MyList"
                 configuration.image = UIImage(named: "plus")
                 configuration.imagePadding = 1
                 configuration.titlePadding = 1
-                configuration.imagePlacement = .top
+                configuration.imagePlacement = .top // image가 title보다 위로 오게 및 verticle 정렬
                 configuration.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
                 
                 let btnMyList = UIButton(configuration: configuration)
@@ -131,6 +134,8 @@ class HeaderComponent: UIView {
                 btnInfo.translatesAutoresizingMaskIntoConstraints = false
                 return btnInfo
             }()
+            
+            // stackView에 각 버튼 등록
             footerOfHeader.addArrangedSubview(btnMyList)
             footerOfHeader.addArrangedSubview(btnPlay)
             footerOfHeader.addArrangedSubview(btnInfo)
@@ -153,6 +158,7 @@ class HeaderComponent: UIView {
         self.addSubview(headerOfHeader)
         self.addSubview(footerOfHeader)
         
+        //constraints
         NSLayoutConstraint.activate([
             // background
             backgroundImage.topAnchor.constraint(equalTo: self.topAnchor),

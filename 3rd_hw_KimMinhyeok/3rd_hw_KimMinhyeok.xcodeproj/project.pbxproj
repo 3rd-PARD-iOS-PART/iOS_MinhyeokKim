@@ -150,7 +150,7 @@
 		DBCD8B092BB6932A006C23F3 /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				DBCD8AFD2BB6834B006C23F3 /* ContentModel.swift */,
+				DBCD8B1F2BB97A76006C23F3 /* model */,
 				DBCD8B1E2BB8BACE006C23F3 /* views */,
 				DBCD8B152BB85949006C23F3 /* components */,
 			);
@@ -187,6 +187,14 @@
 				DBCD8B072BB6930E006C23F3 /* MoreViewController.swift */,
 			);
 			path = views;
+			sourceTree = "<group>";
+		};
+		DBCD8B1F2BB97A76006C23F3 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				DBCD8AFD2BB6834B006C23F3 /* ContentModel.swift */,
+			);
+			path = model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

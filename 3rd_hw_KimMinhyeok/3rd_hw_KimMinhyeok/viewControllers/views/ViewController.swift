@@ -7,6 +7,7 @@
 
 import UIKit
 
+// tabBar 및 tabView 설정
 class ViewController: UITabBarController {
     
     override func viewDidLoad() {
@@ -36,7 +37,7 @@ class ViewController: UITabBarController {
         tabBarItems[3].title = "Downloads"
         tabBarItems[4].title = "More"
         
-        // Tab Bar styles
+        // TabBar styles
         self.tabBar.barTintColor = UIColor(red: 18/255, green: 18/255, blue: 18/255, alpha: 1.0)
         self.tabBar.tintColor = UIColor.white
         self.tabBar.unselectedItemTintColor = UIColor(red: 140/255, green: 135/255, blue: 135/255, alpha: 1.0)

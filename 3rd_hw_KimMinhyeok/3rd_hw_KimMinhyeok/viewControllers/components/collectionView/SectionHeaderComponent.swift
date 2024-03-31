@@ -7,6 +7,7 @@
 
 import UIKit
 
+// sectionHeader: UIView로 하여 cell이 움직이더라도 화면에서 함께 움직이지 않게 하기 위함
 class SectionHeaderComponent: UIView {
     let category: UILabel = {
         let category = UILabel()
