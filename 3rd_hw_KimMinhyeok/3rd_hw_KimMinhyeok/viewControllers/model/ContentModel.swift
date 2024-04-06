@@ -73,6 +73,14 @@ extension ContentModel{
             ContentModel(category: "Nollywood Movies & TV", image: "movie35"),
             ContentModel(category: "Nollywood Movies & TV", image: "movie36"),
         ],
+        [
+            ContentModel(category: "African Movies", image: "movie25"),
+            ContentModel(category: "African Movies", image: "movie26"),
+            ContentModel(category: "African Movies", image: "movie27"),
+            ContentModel(category: "African Movies", image: "movie28"),
+            ContentModel(category: "African Movies", image: "movie29"),
+            ContentModel(category: "African Movies", image: "movie30"),
+        ],
     ]
 }
 #endif

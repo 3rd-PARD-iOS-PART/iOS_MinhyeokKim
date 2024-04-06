@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		DB7D79CE2BBDA2A0005F12F8 /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D79CD2BBDA2A0005F12F8 /* ContentService.swift */; };
+		DB7D79D22BBEB170005F12F8 /* MyListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D79D12BBEB170005F12F8 /* MyListViewController.swift */; };
+		DB7D79D52BBEC209005F12F8 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D79D42BBEC209005F12F8 /* NavigationController.swift */; };
+		DB7D79DB2BBEC7E3005F12F8 /* TVShowsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D79DA2BBEC7E3005F12F8 /* TVShowsViewController.swift */; };
 		DBCD8ACC2BB5903A006C23F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD8ACB2BB5903A006C23F3 /* AppDelegate.swift */; };
 		DBCD8ACE2BB5903A006C23F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD8ACD2BB5903A006C23F3 /* SceneDelegate.swift */; };
 		DBCD8AD02BB5903A006C23F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD8ACF2BB5903A006C23F3 /* ViewController.swift */; };
@@ -48,6 +51,9 @@
 
 /* Begin PBXFileReference section */
 		DB7D79CD2BBDA2A0005F12F8 /* ContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentService.swift; sourceTree = "<group>"; };
+		DB7D79D12BBEB170005F12F8 /* MyListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyListViewController.swift; sourceTree = "<group>"; };
+		DB7D79D42BBEC209005F12F8 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		DB7D79DA2BBEC7E3005F12F8 /* TVShowsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVShowsViewController.swift; sourceTree = "<group>"; };
 		DBCD8AC82BB5903A006C23F3 /* 3rd_hw_KimMinhyeok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 3rd_hw_KimMinhyeok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCD8ACB2BB5903A006C23F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBCD8ACD2BB5903A006C23F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +112,26 @@
 			path = services;
 			sourceTree = "<group>";
 		};
+		DB7D79CF2BBEB0FE005F12F8 /* tabViews */ = {
+			isa = PBXGroup;
+			children = (
+				DBCD8AFF2BB692BB006C23F3 /* HomeViewController.swift */,
+				DBCD8B012BB692D4006C23F3 /* SearchViewController.swift */,
+				DBCD8B032BB692F6006C23F3 /* ComingSoonViewController.swift */,
+				DBCD8B052BB69301006C23F3 /* DownLoadViewController.swift */,
+				DBCD8B072BB6930E006C23F3 /* MoreViewController.swift */,
+			);
+			path = tabViews;
+			sourceTree = "<group>";
+		};
+		DB7D79D32BBEC1E5005F12F8 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DB7D79D42BBEC209005F12F8 /* NavigationController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
 		DBCD8ABF2BB5903A006C23F3 = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +155,11 @@
 		DBCD8ACA2BB5903A006C23F3 /* 3rd_hw_KimMinhyeok */ = {
 			isa = PBXGroup;
 			children = (
-				DBCD8B092BB6932A006C23F3 /* viewControllers */,
+				DB7D79D32BBEC1E5005F12F8 /* controllers */,
+				DB7D79CC2BBDA279005F12F8 /* services */,
+				DBCD8B1E2BB8BACE006C23F3 /* views */,
+				DBCD8B152BB85949006C23F3 /* components */,
+				DBCD8B1F2BB97A76006C23F3 /* models */,
 				DBCD8ACB2BB5903A006C23F3 /* AppDelegate.swift */,
 				DBCD8ACD2BB5903A006C23F3 /* SceneDelegate.swift */,
 				DBCD8AD12BB5903A006C23F3 /* Main.storyboard */,
@@ -157,17 +187,6 @@
 			path = 3rd_hw_KimMinhyeokUITests;
 			sourceTree = "<group>";
 		};
-		DBCD8B092BB6932A006C23F3 /* viewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				DB7D79CC2BBDA279005F12F8 /* services */,
-				DBCD8B1F2BB97A76006C23F3 /* models */,
-				DBCD8B1E2BB8BACE006C23F3 /* views */,
-				DBCD8B152BB85949006C23F3 /* components */,
-			);
-			path = viewControllers;
-			sourceTree = "<group>";
-		};
 		DBCD8B152BB85949006C23F3 /* components */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,12 +209,10 @@
 		DBCD8B1E2BB8BACE006C23F3 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				DB7D79DA2BBEC7E3005F12F8 /* TVShowsViewController.swift */,
+				DB7D79D12BBEB170005F12F8 /* MyListViewController.swift */,
 				DBCD8ACF2BB5903A006C23F3 /* ViewController.swift */,
-				DBCD8AFF2BB692BB006C23F3 /* HomeViewController.swift */,
-				DBCD8B012BB692D4006C23F3 /* SearchViewController.swift */,
-				DBCD8B032BB692F6006C23F3 /* ComingSoonViewController.swift */,
-				DBCD8B052BB69301006C23F3 /* DownLoadViewController.swift */,
-				DBCD8B072BB6930E006C23F3 /* MoreViewController.swift */,
+				DB7D79CF2BBEB0FE005F12F8 /* tabViews */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -343,12 +360,15 @@
 				DBCD8B022BB692D4006C23F3 /* SearchViewController.swift in Sources */,
 				DBCD8B1A2BB85A4B006C23F3 /* CollectionViewComponent.swift in Sources */,
 				DBCD8B1C2BB860B5006C23F3 /* SectionHeaderComponent.swift in Sources */,
+				DB7D79DB2BBEC7E3005F12F8 /* TVShowsViewController.swift in Sources */,
 				DBCD8ACC2BB5903A006C23F3 /* AppDelegate.swift in Sources */,
 				DBCD8AFE2BB6834B006C23F3 /* ContentModel.swift in Sources */,
 				DBCD8B182BB85A12006C23F3 /* HeaderComponent.swift in Sources */,
 				DBCD8B062BB69301006C23F3 /* DownLoadViewController.swift in Sources */,
 				DBCD8B082BB6930E006C23F3 /* MoreViewController.swift in Sources */,
+				DB7D79D52BBEC209005F12F8 /* NavigationController.swift in Sources */,
 				DB7D79CE2BBDA2A0005F12F8 /* ContentService.swift in Sources */,
+				DB7D79D22BBEB170005F12F8 /* MyListViewController.swift in Sources */,
 				DBCD8B042BB692F6006C23F3 /* ComingSoonViewController.swift in Sources */,
 				DBCD8ACE2BB5903A006C23F3 /* SceneDelegate.swift in Sources */,
 				DBCD8AFC2BB59921006C23F3 /* SectionCellComponent.swift in Sources */,
