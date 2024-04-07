@@ -13,12 +13,14 @@ class SearchViewController: UIViewController {
         view.backgroundColor = UIColor.clear
         setUI()
         fetchTMDBData()
+        updateUI()
     }
     
     private let contentService = ContentService()
-    private var movies: [ContentModel] = []
+    private var fetchedMovies: [ContentModel] = []
+    private var moviesForView: [ContentModel] = []
     
-    let searchBar: UISearchBar = {
+    private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.searchTextField.backgroundColor = UIColor.gray
         searchBar.searchTextField.textColor = UIColor.white
@@ -49,15 +51,13 @@ class SearchViewController: UIViewController {
         // searchBar
         searchBar.delegate = self
         navigationItem.titleView = searchBar
-    }
-    
-    func updateUI(with movies: [ContentModel]?) {
-        // tableView
+
         tableView.dataSource = self
         tableView.delegate = self
         tableView.register(SearchTableCellView.self, forCellReuseIdentifier: "Cell")
         
         view.addSubview(tableView)
+        
         
         NSLayoutConstraint.activate([
             // tableView
@@ -66,6 +66,10 @@ class SearchViewController: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -100)
         ])
+    }
+    
+    func updateUI() {
+        self.tableView.reloadData()
     }
     
     private func fetchTMDBData() {
@@ -78,28 +82,41 @@ class SearchViewController: UIViewController {
             
             // 영화 데이터 업데이트
             if let moviesOfCategory = moviesOfCategory {
-                self.movies = moviesOfCategory
-                DispatchQueue.main.async {
-                    self.updateUI(with: self.movies)
-                }
+                self.fetchedMovies = moviesOfCategory
+                self.moviesForView = self.fetchedMovies
             }
         }
     }
 }
 
 extension SearchViewController: UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        // 검색을 실행하는 로직을 여기에 추가
-        if let searchText = searchBar.text {
-            print("검색어: \(searchText)")
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterItems(with: searchText)
+        self.updateUI()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        // 취소 버튼을 누를 때 검색어를 초기화하고 테이블 뷰를 갱신
+        searchBar.text = nil
+        searchBar.resignFirstResponder() // 키보드 내림
+        filterItems(with: "")
+        self.updateUI()
+    }
+    
+    private func filterItems(with searchText: String) {
+        if searchText.isEmpty {
+            // 검색어가 비어있으면 모든 항목을 포함
+            moviesForView = fetchedMovies
+        } else {
+            // 검색어를 기준으로 items 배열을 필터링하여 검색 결과를 moviesForView에 저장
+            moviesForView = fetchedMovies.filter { $0.title.lowercased().contains(searchText.lowercased()) }
         }
-        searchBar.resignFirstResponder() // 키보드 숨기기
     }
 }
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return movies.count 
+        return moviesForView.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -107,16 +124,19 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
             return UITableViewCell()
         }
         
-        if movies.indices.contains(indexPath.item) {
-            let content = movies[indexPath.item]
+        if moviesForView.indices.contains(indexPath.item) {
+            let content = moviesForView[indexPath.item]
             let title = content.title
             let backdropURL = content.backdropURL
             DispatchQueue.global().async {
-                if let imageData = try? Data(contentsOf: backdropURL) {
+                if let imageData = try? Data(contentsOf: backdropURL),
+                   let image = UIImage(data: imageData) {
                     DispatchQueue.main.async {
                         cell.label.text = title
-                        cell.cellImageView.image = UIImage(data: imageData)
+                        cell.cellImageView.image = image
                     }
+                } else {
+                    print("Failed to load image from URL: \(backdropURL)")
                 }
             }
         }
