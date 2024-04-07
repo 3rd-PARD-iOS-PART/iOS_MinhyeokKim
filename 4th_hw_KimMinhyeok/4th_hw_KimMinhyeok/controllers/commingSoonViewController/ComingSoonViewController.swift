@@ -84,6 +84,7 @@ extension ComingSoonViewController: UITableViewDelegate, UITableViewDataSource{
         }
         
         if movies.indices.contains(indexPath.item) {
+            // celld
             let content = movies[indexPath.item]
             let backdropURL = content.backdropURL
             let date = content.releaseDate
@@ -91,6 +92,7 @@ extension ComingSoonViewController: UITableViewDelegate, UITableViewDataSource{
             let description = content.overview
             // genreId들을 해당 문자열로 바꾸기
             let genres = content.genreIds.compactMap{ ContentService.genreMapping[$0] }
+            // genre들을 " · "와 함께 이어붙여서 하나의 string으로 만들기
             let kewords = genres.joined(separator: " · ")
             
             DispatchQueue.global().async {

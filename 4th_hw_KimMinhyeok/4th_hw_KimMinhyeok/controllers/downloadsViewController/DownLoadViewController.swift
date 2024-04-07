@@ -27,6 +27,7 @@ class DownLoadViewController: UIViewController {
     let didntDownloadidLabel: UILabel = {
         let label = UILabel()
         label.text = "Movies and TV shows that you \ndownload appear heare"
+        // 라벨은 두줄이 되어야함 cuz of \n
         label.numberOfLines = 2
         label.textColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.65)
         label.font = UIFont.systemFont(ofSize: 19, weight: .medium)
@@ -35,6 +36,7 @@ class DownLoadViewController: UIViewController {
         return label
     }()
     
+    // find 버튼
     let btnFind: UIButton = {
         var configuration = UIButton.Configuration.filled()
         configuration.background.backgroundColor = UIColor.white

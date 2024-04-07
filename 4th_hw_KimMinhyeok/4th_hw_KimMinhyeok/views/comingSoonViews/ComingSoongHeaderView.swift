@@ -7,12 +7,13 @@
 
 import UIKit
 
+// 기본적인 UI이므로 주석 안해도 되겠지...?
 class ComingSoonHeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.backgroundColor = .clear
-        self.translatesAutoresizingMaskIntoConstraints = false // Add this line
+        self.translatesAutoresizingMaskIntoConstraints = false
         setupUI()
     }
 

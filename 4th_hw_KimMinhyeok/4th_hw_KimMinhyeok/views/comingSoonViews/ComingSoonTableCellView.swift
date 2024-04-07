@@ -30,6 +30,7 @@ class ComingSoonTableCellView: UITableViewCell {
         // configuration: Button안 image, title 공존 및 기타 설정을 위함
         var configuration = UIButton.Configuration.filled()
         configuration.background.backgroundColor = .clear
+        // image 스타일 적용
         if let image = UIImage(named: "remindMe") {
             let size = CGSize(width: 24, height: 24)
             UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
@@ -38,15 +39,19 @@ class ComingSoonTableCellView: UITableViewCell {
             UIGraphicsEndImageContext()
             configuration.image = scaledImage
         }
+        // title 스타일 적용
         configuration.attributedTitle = AttributedString("Remind Me", attributes: AttributeContainer([
                 NSAttributedString.Key.font: UIFont.systemFont(ofSize: 11.13, weight: .regular)
             ])
         )
+        
+        // image와 title 사이 간격: 7
         configuration.imagePadding = 7
         configuration.titlePadding = 7
         configuration.imagePlacement = .top // image가 title보다 위로 오게 및 verticle 정렬
         configuration.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 0)
         
+        // 위에서 설정한 configuration으로 버튼 생성
         let btnRemindMe = UIButton(configuration: configuration)
        
         btnRemindMe.translatesAutoresizingMaskIntoConstraints = false

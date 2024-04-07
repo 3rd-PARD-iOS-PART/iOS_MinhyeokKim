@@ -7,6 +7,7 @@
 
 import UIKit
 
+// 기본적인 UI 라 주석 더이상 x, 여러 재료들 선언 후 addSubview, constraint 설정이 다 임
 class SearchTableCellView: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: "Cell")

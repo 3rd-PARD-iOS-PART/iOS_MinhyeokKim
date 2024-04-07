@@ -17,18 +17,21 @@ class SearchViewController: UIViewController {
     }
     
     private let contentService = ContentService()
-    private var fetchedMovies: [ContentModel] = []
-    private var moviesForView: [ContentModel] = []
+    private var fetchedMovies: [ContentModel] = [] // api로 가져온 전체 데이터
+    private var moviesForView: [ContentModel] = [] // 검색 등의 이유로 보여주어야 할 데이터
     
+    // searchBar
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
         searchBar.searchTextField.backgroundColor = UIColor.gray
         searchBar.searchTextField.textColor = UIColor.white
         searchBar.placeholder = "Search for a show, movie, genre, e.t.c."
-        // placeholder style
+        
+        // placeholder 스타일
         let placeholderAttributes = [NSAttributedString.Key.foregroundColor: UIColor.lightGray]
         searchBar.searchTextField.attributedPlaceholder = NSAttributedString(string: searchBar.placeholder ?? "", attributes: placeholderAttributes)
-        // searchButton style
+        
+        // searchButton 스타일
         if let leftImageView = searchBar.searchTextField.leftView as? UIImageView {
             leftImageView.image = leftImageView.image?.withRenderingMode(.alwaysTemplate)
             leftImageView.tintColor = UIColor.lightGray
@@ -36,6 +39,7 @@ class SearchViewController: UIViewController {
         return searchBar
     }()
     
+    // tableView
     let tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.backgroundColor = .clear
@@ -47,6 +51,7 @@ class SearchViewController: UIViewController {
         return tableView
     }()
     
+    // 처음 UI 설정
     func setUI() {
         // searchBar
         searchBar.delegate = self
@@ -68,10 +73,12 @@ class SearchViewController: UIViewController {
         ])
     }
     
+    // 검색을 위한 데이터 갱신
     func updateUI() {
         self.tableView.reloadData()
     }
     
+    // api 데이터 fetch
     private func fetchTMDBData() {
         contentService.fetchMovies(category: "Top Rated Movies") {[weak self] moviesOfCategory, error in
             guard let self = self else { return }
@@ -80,7 +87,7 @@ class SearchViewController: UIViewController {
                 return
             }
             
-            // 영화 데이터 업데이트
+            // 전체 데이터와, 처음 보여줘야할 데이터 설정
             if let moviesOfCategory = moviesOfCategory {
                 self.fetchedMovies = moviesOfCategory
                 self.moviesForView = self.fetchedMovies
@@ -89,20 +96,23 @@ class SearchViewController: UIViewController {
     }
 }
 
+// 검색 기능 delegate
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filterItems(with: searchText)
+        // 검색 후 tableView 데이터 갱신
         self.updateUI()
     }
     
+    // 취소 버튼을 누를 때 검색어를 초기화하고 테이블 뷰를 갱신
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        // 취소 버튼을 누를 때 검색어를 초기화하고 테이블 뷰를 갱신
         searchBar.text = nil
         searchBar.resignFirstResponder() // 키보드 내림
         filterItems(with: "")
         self.updateUI()
     }
     
+    // 검색 조건 관리
     private func filterItems(with searchText: String) {
         if searchText.isEmpty {
             // 검색어가 비어있으면 모든 항목을 포함
@@ -116,6 +126,7 @@ extension SearchViewController: UISearchBarDelegate {
 
 extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // fetchedMovies가 아닌 보여줘야할 데이터 수
         return moviesForView.count
     }
     
@@ -127,6 +138,7 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource{
         if moviesForView.indices.contains(indexPath.item) {
             let content = moviesForView[indexPath.item]
             let title = content.title
+            // poster가 아닌 가로이미지인 backdrop
             let backdropURL = content.backdropURL
             DispatchQueue.global().async {
                 if let imageData = try? Data(contentsOf: backdropURL),

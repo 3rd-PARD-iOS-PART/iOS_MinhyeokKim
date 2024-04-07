@@ -71,7 +71,7 @@ class ContentService {
                     let imageURL = URL(string: "https://image.tmdb.org/t/p/w500\(movie.poster_path)")!
                     // backdrop
                     let backdropURL = URL(string: "https://image.tmdb.org/t/p/w500\(movie.backdrop_path)")!
-                    // releaseDate
+                    // releaseDate: 포맷 ui에 맞게 저장해야함
                     var releaseDate = ""
                     let dateFormatter = DateFormatter()
                     dateFormatter.dateFormat = "yyyy-MM-dd"
