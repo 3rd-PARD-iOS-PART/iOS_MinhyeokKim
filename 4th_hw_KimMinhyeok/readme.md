@@ -5,7 +5,7 @@
 <br>
 1. TabBar의 Home을 선택했을 때 보이는 화면입니다.(지난과제의 내용이었음. But, scroll시 네비게이션바 색상 변하는 것 막는 것 추가)
 <img src="https://github.com/3rd-PARD-iOS-PART/iOS_MinhyeokKim/blob/main/4th_hw_KimMinhyeok/readme_images/homeView1.png?raw=true" width="300"/>
-<br>
+<hr>
 2-1. TabBar의 Search를 선택했을 때 보이는 화면입니다.
 <img src="https://github.com/3rd-PARD-iOS-PART/iOS_MinhyeokKim/blob/main/4th_hw_KimMinhyeok/readme_images/searchView1.png?raw=true" width="300"/>
 <br>
