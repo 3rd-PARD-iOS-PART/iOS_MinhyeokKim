@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		DB7D79CE2BBDA2A0005F12F8 /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D79CD2BBDA2A0005F12F8 /* ContentService.swift */; };
 		DBC0078F2BC1478600023272 /* SearchTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0078E2BC1478600023272 /* SearchTableCellView.swift */; };
+		DBC007992BC27EBA00023272 /* ComingSoongHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC007982BC27EBA00023272 /* ComingSoongHeaderView.swift */; };
+		DBC0079B2BC2879A00023272 /* ComingSoonTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0079A2BC2879A00023272 /* ComingSoonTableCellView.swift */; };
 		DBCD8ACC2BB5903A006C23F3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD8ACB2BB5903A006C23F3 /* AppDelegate.swift */; };
 		DBCD8ACE2BB5903A006C23F3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD8ACD2BB5903A006C23F3 /* SceneDelegate.swift */; };
 		DBCD8AD02BB5903A006C23F3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBCD8ACF2BB5903A006C23F3 /* ViewController.swift */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		DB7D79CD2BBDA2A0005F12F8 /* ContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentService.swift; sourceTree = "<group>"; };
 		DBC0078E2BC1478600023272 /* SearchTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCellView.swift; sourceTree = "<group>"; };
+		DBC007982BC27EBA00023272 /* ComingSoongHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoongHeaderView.swift; sourceTree = "<group>"; };
+		DBC0079A2BC2879A00023272 /* ComingSoonTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonTableCellView.swift; sourceTree = "<group>"; };
 		DBCD8AC82BB5903A006C23F3 /* 4th_hw_KimMinhyeok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 4th_hw_KimMinhyeok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBCD8ACB2BB5903A006C23F3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DBCD8ACD2BB5903A006C23F3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -111,9 +115,9 @@
 		DB7D79D32BBEC1E5005F12F8 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				DBC007942BC27CDC00023272 /* commingSoonViewController */,
 				DBC007912BC14CF600023272 /* searchViewController */,
 				DBC0078D2BC1462800023272 /* homeViewControlelr */,
-				DBCD8B032BB692F6006C23F3 /* ComingSoonViewController.swift */,
 				DBCD8B052BB69301006C23F3 /* DownLoadViewController.swift */,
 				DBCD8B072BB6930E006C23F3 /* MoreViewController.swift */,
 				DBCD8ACF2BB5903A006C23F3 /* ViewController.swift */,
@@ -153,6 +157,23 @@
 				DBCD8B012BB692D4006C23F3 /* SearchViewController.swift */,
 			);
 			path = searchViewController;
+			sourceTree = "<group>";
+		};
+		DBC007942BC27CDC00023272 /* commingSoonViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DBCD8B032BB692F6006C23F3 /* ComingSoonViewController.swift */,
+			);
+			path = commingSoonViewController;
+			sourceTree = "<group>";
+		};
+		DBC007972BC27E9600023272 /* comingSoonViews */ = {
+			isa = PBXGroup;
+			children = (
+				DBC007982BC27EBA00023272 /* ComingSoongHeaderView.swift */,
+				DBC0079A2BC2879A00023272 /* ComingSoonTableCellView.swift */,
+			);
+			path = comingSoonViews;
 			sourceTree = "<group>";
 		};
 		DBCD8ABF2BB5903A006C23F3 = {
@@ -221,6 +242,7 @@
 		DBCD8B1E2BB8BACE006C23F3 /* views */ = {
 			isa = PBXGroup;
 			children = (
+				DBC007972BC27E9600023272 /* comingSoonViews */,
 				DBC0078C2BC141E000023272 /* searchViews */,
 				DBC0078B2BC141D400023272 /* homeViews */,
 			);
@@ -379,6 +401,8 @@
 				DBCD8B042BB692F6006C23F3 /* ComingSoonViewController.swift in Sources */,
 				DBC0078F2BC1478600023272 /* SearchTableCellView.swift in Sources */,
 				DBCD8ACE2BB5903A006C23F3 /* SceneDelegate.swift in Sources */,
+				DBC0079B2BC2879A00023272 /* ComingSoonTableCellView.swift in Sources */,
+				DBC007992BC27EBA00023272 /* ComingSoongHeaderView.swift in Sources */,
 				DBCD8AFC2BB59921006C23F3 /* SectionCellComponent.swift in Sources */,
 				DBCD8B002BB692BB006C23F3 /* HomeViewController.swift in Sources */,
 			);

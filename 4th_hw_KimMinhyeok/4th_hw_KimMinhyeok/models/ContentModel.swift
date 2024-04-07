@@ -12,4 +12,7 @@ struct ContentModel {
     let title: String
     let imageURL: URL
     let backdropURL: URL
+    let releaseDate: String
+    let overview: String
+    let genreIds: [Int]
 }

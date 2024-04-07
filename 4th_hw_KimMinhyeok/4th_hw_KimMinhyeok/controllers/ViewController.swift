@@ -13,6 +13,34 @@ class ViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black
+        
+        if #available(iOS 15, *) {
+            // NavigationBar
+            let navigationBarAppearance = UINavigationBarAppearance()
+            navigationBarAppearance.configureWithOpaqueBackground()
+            navigationBarAppearance.titleTextAttributes = [
+                NSAttributedString.Key.foregroundColor : UIColor.white
+            ]
+            navigationBarAppearance.backgroundColor = UIColor.black
+            UINavigationBar.appearance().standardAppearance = navigationBarAppearance
+            UINavigationBar.appearance().compactAppearance = navigationBarAppearance
+            UINavigationBar.appearance().scrollEdgeAppearance = navigationBarAppearance
+            
+            // TabBar
+            let tabBarAppearance = UITabBarAppearance()
+            tabBarAppearance.configureWithOpaqueBackground()
+            tabBarAppearance.backgroundColor = UIColor(red: 18/255, green: 18/255, blue: 18/255, alpha: 1.0)
+            // 선택된 탭
+            tabBarAppearance.stackedLayoutAppearance.selected.iconColor = UIColor.white
+            tabBarAppearance.stackedLayoutAppearance.selected.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+            // 선택되지 않은 탭
+            let unselectedColor = UIColor(red: 140/255, green: 135/255, blue: 135/255, alpha: 1.0)
+            tabBarAppearance.stackedLayoutAppearance.normal.iconColor = unselectedColor
+            tabBarAppearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: unselectedColor]
+            
+            UITabBar.appearance().standardAppearance = tabBarAppearance
+        }
+        
         setTabBar()
     }
     func setTabBar() {
@@ -36,10 +64,5 @@ class ViewController: UITabBarController {
         tabBarItems[2].title = "ComingSoon"
         tabBarItems[3].title = "Downloads"
         tabBarItems[4].title = "More"
-        
-        // TabBar styles
-        self.tabBar.barTintColor = UIColor(red: 18/255, green: 18/255, blue: 18/255, alpha: 1.0)
-        self.tabBar.tintColor = UIColor.white
-        self.tabBar.unselectedItemTintColor = UIColor(red: 140/255, green: 135/255, blue: 135/255, alpha: 1.0)
     }
 }

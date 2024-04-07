@@ -15,6 +15,12 @@ class HomeViewController: UIViewController {
         setUI()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+    
     func setUI(){
         // scrollView
         let scrollView: UIScrollView = {
