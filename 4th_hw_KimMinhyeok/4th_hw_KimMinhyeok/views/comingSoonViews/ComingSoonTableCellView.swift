@@ -38,7 +38,10 @@ class ComingSoonTableCellView: UITableViewCell {
             UIGraphicsEndImageContext()
             configuration.image = scaledImage
         }
-        configuration.attributedTitle = AttributedString("Remind Me", attributes: AttributeContainer([NSAttributedString.Key.font: UIFont.systemFont(ofSize: 11.13, weight: .regular)]))
+        configuration.attributedTitle = AttributedString("Remind Me", attributes: AttributeContainer([
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 11.13, weight: .regular)
+            ])
+        )
         configuration.imagePadding = 7
         configuration.titlePadding = 7
         configuration.imagePlacement = .top // image가 title보다 위로 오게 및 verticle 정렬
