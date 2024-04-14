@@ -14,6 +14,13 @@
 		DB73CCBD2BCC18FC001F2489 /* VideoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCBC2BCC18FC001F2489 /* VideoService.swift */; };
 		DB73CCC12BCC1926001F2489 /* SearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCBF2BCC1926001F2489 /* SearchDetailViewController.swift */; };
 		DB73CCC32BCC194D001F2489 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCC22BCC194D001F2489 /* SearchViewController.swift */; };
+		DB73CCD02BCC3B7F001F2489 /* CustomTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCCF2BCC3B7F001F2489 /* CustomTabViewController.swift */; };
+		DB73CCD32BCC446C001F2489 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DB73CCD22BCC446C001F2489 /* SnapKit */; };
+		DB73CCD52BCC446C001F2489 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DB73CCD42BCC446C001F2489 /* SnapKit-Dynamic */; };
+		DB73CCD72BCC4494001F2489 /* PagingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCD62BCC4494001F2489 /* PagingCollectionViewCell.swift */; };
+		DB73CCD92BCC44B5001F2489 /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCD82BCC44B5001F2489 /* PagingView.swift */; };
+		DB73CCDC2BCC44ED001F2489 /* PagingTabBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCDB2BCC44ED001F2489 /* PagingTabBarCell.swift */; };
+		DB73CCDF2BCC452A001F2489 /* PagingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCDE2BCC452A001F2489 /* PagingDelegate.swift */; };
 		DB7D79CE2BBDA2A0005F12F8 /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D79CD2BBDA2A0005F12F8 /* ContentService.swift */; };
 		DBC0078F2BC1478600023272 /* SearchTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0078E2BC1478600023272 /* SearchTableCellView.swift */; };
 		DBC007992BC27EBA00023272 /* ComingSoongHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC007982BC27EBA00023272 /* ComingSoongHeaderView.swift */; };
@@ -63,6 +70,11 @@
 		DB73CCBC2BCC18FC001F2489 /* VideoService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = VideoService.swift; path = "../../../../../5th_hw_KimMinhyeok 복사본/5th_hw_KimMinhyeok/utils/VideoService.swift"; sourceTree = "<group>"; };
 		DB73CCBF2BCC1926001F2489 /* SearchDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
 		DB73CCC22BCC194D001F2489 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "../../../../../../5th_hw_KimMinhyeok 복사본/5th_hw_KimMinhyeok/controllers/searchViewController/SearchViewController.swift"; sourceTree = "<group>"; };
+		DB73CCCF2BCC3B7F001F2489 /* CustomTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewController.swift; sourceTree = "<group>"; };
+		DB73CCD62BCC4494001F2489 /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewCell.swift; sourceTree = "<group>"; };
+		DB73CCD82BCC44B5001F2489 /* PagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
+		DB73CCDB2BCC44ED001F2489 /* PagingTabBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingTabBarCell.swift; sourceTree = "<group>"; };
+		DB73CCDE2BCC452A001F2489 /* PagingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingDelegate.swift; sourceTree = "<group>"; };
 		DB7D79CD2BBDA2A0005F12F8 /* ContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentService.swift; sourceTree = "<group>"; };
 		DBC0078E2BC1478600023272 /* SearchTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCellView.swift; sourceTree = "<group>"; };
 		DBC007982BC27EBA00023272 /* ComingSoongHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoongHeaderView.swift; sourceTree = "<group>"; };
@@ -96,6 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB73CCD32BCC446C001F2489 /* SnapKit in Frameworks */,
+				DB73CCD52BCC446C001F2489 /* SnapKit-Dynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +143,7 @@
 		DB73CCB72BCC18DD001F2489 /* searchDetailViews */ = {
 			isa = PBXGroup;
 			children = (
+				DB73CCC62BCC2C39001F2489 /* searchDetailCustomTabView */,
 				DB73CCB82BCC18DD001F2489 /* SearchDetailHeaderView.swift */,
 			);
 			name = searchDetailViews;
@@ -142,6 +157,25 @@
 			);
 			name = searchDetailViewController;
 			path = "../../../../../../5th_hw_KimMinhyeok 복사본/5th_hw_KimMinhyeok/controllers/searchViewController/searchDetailViewController";
+			sourceTree = "<group>";
+		};
+		DB73CCC62BCC2C39001F2489 /* searchDetailCustomTabView */ = {
+			isa = PBXGroup;
+			children = (
+				DB73CCCF2BCC3B7F001F2489 /* CustomTabViewController.swift */,
+				DB73CCD62BCC4494001F2489 /* PagingCollectionViewCell.swift */,
+				DB73CCD82BCC44B5001F2489 /* PagingView.swift */,
+				DB73CCDB2BCC44ED001F2489 /* PagingTabBarCell.swift */,
+			);
+			path = searchDetailCustomTabView;
+			sourceTree = "<group>";
+		};
+		DB73CCDD2BCC4515001F2489 /* delegate */ = {
+			isa = PBXGroup;
+			children = (
+				DB73CCDE2BCC452A001F2489 /* PagingDelegate.swift */,
+			);
+			path = delegate;
 			sourceTree = "<group>";
 		};
 		DB7D79CC2BBDA279005F12F8 /* utils */ = {
@@ -258,6 +292,7 @@
 		DBCD8ACA2BB5903A006C23F3 /* 5th_hw_KimMinhyeok */ = {
 			isa = PBXGroup;
 			children = (
+				DB73CCDD2BCC4515001F2489 /* delegate */,
 				DB7D79D32BBEC1E5005F12F8 /* controllers */,
 				DB7D79CC2BBDA279005F12F8 /* utils */,
 				DBCD8B1E2BB8BACE006C23F3 /* views */,
@@ -334,6 +369,10 @@
 			dependencies = (
 			);
 			name = 5th_hw_KimMinhyeok;
+			packageProductDependencies = (
+				DB73CCD22BCC446C001F2489 /* SnapKit */,
+				DB73CCD42BCC446C001F2489 /* SnapKit-Dynamic */,
+			);
 			productName = 3rd_hw_KimMinhyeok;
 			productReference = DBCD8AC82BB5903A006C23F3 /* 5th_hw_KimMinhyeok.app */;
 			productType = "com.apple.product-type.application";
@@ -406,6 +445,9 @@
 				Base,
 			);
 			mainGroup = DBCD8ABF2BB5903A006C23F3;
+			packageReferences = (
+				DB73CCD12BCC446C001F2489 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = DBCD8AC92BB5903A006C23F3 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -452,12 +494,15 @@
 				DBCD8AD02BB5903A006C23F3 /* ViewController.swift in Sources */,
 				DB73CCB52BCC18CF001F2489 /* HorizonButtonView.swift in Sources */,
 				DB73CCB62BCC18CF001F2489 /* VerticalButtonView.swift in Sources */,
+				DB73CCD72BCC4494001F2489 /* PagingCollectionViewCell.swift in Sources */,
+				DB73CCD92BCC44B5001F2489 /* PagingView.swift in Sources */,
 				DBCD8B1A2BB85A4B006C23F3 /* CollectionViewComponent.swift in Sources */,
 				DBCD8B1C2BB860B5006C23F3 /* SectionHeaderComponent.swift in Sources */,
 				DBCD8ACC2BB5903A006C23F3 /* AppDelegate.swift in Sources */,
 				DBCD8AFE2BB6834B006C23F3 /* ContentModel.swift in Sources */,
 				DBCD8B182BB85A12006C23F3 /* HeaderComponent.swift in Sources */,
 				DBCD8B062BB69301006C23F3 /* DownLoadViewController.swift in Sources */,
+				DB73CCDC2BCC44ED001F2489 /* PagingTabBarCell.swift in Sources */,
 				DB73CCBB2BCC18F2001F2489 /* VideoModel.swift in Sources */,
 				DBCD8B082BB6930E006C23F3 /* MoreViewController.swift in Sources */,
 				DB7D79CE2BBDA2A0005F12F8 /* ContentService.swift in Sources */,
@@ -468,7 +513,9 @@
 				DBCD8ACE2BB5903A006C23F3 /* SceneDelegate.swift in Sources */,
 				DB73CCBD2BCC18FC001F2489 /* VideoService.swift in Sources */,
 				DBC0079B2BC2879A00023272 /* ComingSoonTableCellView.swift in Sources */,
+				DB73CCD02BCC3B7F001F2489 /* CustomTabViewController.swift in Sources */,
 				DBC007992BC27EBA00023272 /* ComingSoongHeaderView.swift in Sources */,
+				DB73CCDF2BCC452A001F2489 /* PagingDelegate.swift in Sources */,
 				DB73CCC12BCC1926001F2489 /* SearchDetailViewController.swift in Sources */,
 				DBCD8AFC2BB59921006C23F3 /* SectionCellComponent.swift in Sources */,
 				DBCD8B002BB692BB006C23F3 /* HomeViewController.swift in Sources */,
@@ -818,6 +865,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB73CCD12BCC446C001F2489 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB73CCD22BCC446C001F2489 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB73CCD12BCC446C001F2489 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		DB73CCD42BCC446C001F2489 /* SnapKit-Dynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB73CCD12BCC446C001F2489 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = "SnapKit-Dynamic";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DBCD8AC02BB5903A006C23F3 /* Project object */;
 }
