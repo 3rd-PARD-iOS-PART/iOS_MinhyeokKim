@@ -21,6 +21,7 @@
 		DB73CCD92BCC44B5001F2489 /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCD82BCC44B5001F2489 /* PagingView.swift */; };
 		DB73CCDC2BCC44ED001F2489 /* PagingTabBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCDB2BCC44ED001F2489 /* PagingTabBarCell.swift */; };
 		DB73CCDF2BCC452A001F2489 /* PagingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCDE2BCC452A001F2489 /* PagingDelegate.swift */; };
+		DB73CCE12BCC5F53001F2489 /* CustomTabViewMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCE02BCC5F53001F2489 /* CustomTabViewMovieTableViewCell.swift */; };
 		DB7D79CE2BBDA2A0005F12F8 /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D79CD2BBDA2A0005F12F8 /* ContentService.swift */; };
 		DBC0078F2BC1478600023272 /* SearchTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0078E2BC1478600023272 /* SearchTableCellView.swift */; };
 		DBC007992BC27EBA00023272 /* ComingSoongHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC007982BC27EBA00023272 /* ComingSoongHeaderView.swift */; };
@@ -75,6 +76,7 @@
 		DB73CCD82BCC44B5001F2489 /* PagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
 		DB73CCDB2BCC44ED001F2489 /* PagingTabBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingTabBarCell.swift; sourceTree = "<group>"; };
 		DB73CCDE2BCC452A001F2489 /* PagingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingDelegate.swift; sourceTree = "<group>"; };
+		DB73CCE02BCC5F53001F2489 /* CustomTabViewMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewMovieTableViewCell.swift; sourceTree = "<group>"; };
 		DB7D79CD2BBDA2A0005F12F8 /* ContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentService.swift; sourceTree = "<group>"; };
 		DBC0078E2BC1478600023272 /* SearchTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCellView.swift; sourceTree = "<group>"; };
 		DBC007982BC27EBA00023272 /* ComingSoongHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoongHeaderView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				DB73CCD62BCC4494001F2489 /* PagingCollectionViewCell.swift */,
 				DB73CCD82BCC44B5001F2489 /* PagingView.swift */,
 				DB73CCDB2BCC44ED001F2489 /* PagingTabBarCell.swift */,
+				DB73CCE02BCC5F53001F2489 /* CustomTabViewMovieTableViewCell.swift */,
 			);
 			path = searchDetailCustomTabView;
 			sourceTree = "<group>";
@@ -498,6 +501,7 @@
 				DB73CCD92BCC44B5001F2489 /* PagingView.swift in Sources */,
 				DBCD8B1A2BB85A4B006C23F3 /* CollectionViewComponent.swift in Sources */,
 				DBCD8B1C2BB860B5006C23F3 /* SectionHeaderComponent.swift in Sources */,
+				DB73CCE12BCC5F53001F2489 /* CustomTabViewMovieTableViewCell.swift in Sources */,
 				DBCD8ACC2BB5903A006C23F3 /* AppDelegate.swift in Sources */,
 				DBCD8AFE2BB6834B006C23F3 /* ContentModel.swift in Sources */,
 				DBCD8B182BB85A12006C23F3 /* HeaderComponent.swift in Sources */,
