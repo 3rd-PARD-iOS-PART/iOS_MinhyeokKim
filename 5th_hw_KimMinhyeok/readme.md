@@ -26,6 +26,19 @@
 <br>
 크게 다른 내용이 없기에 기본적인 UI입니다. UIImageView, UILabel, UIButton을 이용하였습니다. 
 <hr>
+<hr>
+#### 여기서부터 이번 과제!!
+<br>
+1. Search 화면의 cell을 클릭했을 때 이동하는 Detail 모달 화면입니다.
+<img src="https://github.com/3rd-PARD-iOS-PART/iOS_MinhyeokKim/blob/main/5th_hw_KimMinhyeok/readme_images/디테일기본.png?raw=true" width="300"/>
+<img src="https://github.com/3rd-PARD-iOS-PART/iOS_MinhyeokKim/blob/main/5th_hw_KimMinhyeok/readme_images/스크롤화면.png?raw=true" width="300"/>
+<img src="https://github.com/3rd-PARD-iOS-PART/iOS_MinhyeokKim/blob/main/5th_hw_KimMinhyeok/readme_images/탭바이동.png?raw=true" width="300"/>
+<img src="https://github.com/3rd-PARD-iOS-PART/iOS_MinhyeokKim/blob/main/5th_hw_KimMinhyeok/readme_images/헤더영상재생.png?raw=true" width="300"/>
+<img src="https://github.com/3rd-PARD-iOS-PART/iOS_MinhyeokKim/blob/main/5th_hw_KimMinhyeok/readme_images/헤더영상풀스크린.png?raw=true" width="300"/>
+<img src="https://github.com/3rd-PARD-iOS-PART/iOS_MinhyeokKim/blob/main/5th_hw_KimMinhyeok/readme_images/테이블뷰영상재생.png?raw=true" width="300"/>
+<img src="https://github.com/3rd-PARD-iOS-PART/iOS_MinhyeokKim/blob/main/5th_hw_KimMinhyeok/readme_images/테이블뷰영상재생2.png?raw=true" width="300"/>
+<img src="https://github.com/3rd-PARD-iOS-PART/iOS_MinhyeokKim/blob/main/5th_hw_KimMinhyeok/readme_images/디테일기본.png?raw=true" width="300"/>
+<img src="https://github.com/3rd-PARD-iOS-PART/iOS_MinhyeokKim/blob/main/5th_hw_KimMinhyeok/readme_images/dismiss.png?raw=true" width="300"/>
 
 ### 🙊사용한 컴포넌트 설명 
 1. 이번 과제에서는 기본적으로 TableView가 searchView와 ComingSoonView에서 사용되었고, 이와 같은 이유로 TableViewCell이 사용되었습니다.<br>
