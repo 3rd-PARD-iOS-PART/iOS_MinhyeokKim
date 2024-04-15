@@ -26,6 +26,7 @@
 <br>
 크게 다른 내용이 없기에 기본적인 UI입니다. UIImageView, UILabel, UIButton을 이용하였습니다. 
 <hr>
+
 #### 여기서부터 이번 과제!!
 <br>
 5. Search 화면의 cell을 클릭했을 때 이동하는 Detail 모달 화면입니다.
@@ -52,6 +53,7 @@
 12. 모달 형태의 화면전환을 했으므로 우상단에 취소버튼으로 dismiss 기능
 <img src="https://github.com/3rd-PARD-iOS-PART/iOS_MinhyeokKim/blob/main/5th_hw_KimMinhyeok/readme_images/dismiss.png?raw=true" width="300"/>
 <hr>
+
 ### 🙊사용한 컴포넌트 설명 
 1. 이번 과제에서는 기본적으로 TableView가 searchView와 ComingSoonView에서 사용되었고, 이와 같은 이유로 TableViewCell이 사용되었습니다.<br>
 2. SearchView에서는 이번과제에서는 특별히 searchBar가 사용되었습니다.<br>
