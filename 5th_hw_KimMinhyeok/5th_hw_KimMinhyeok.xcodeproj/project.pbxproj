@@ -17,12 +17,13 @@
 		DB73CCD02BCC3B7F001F2489 /* CustomTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCCF2BCC3B7F001F2489 /* CustomTabViewController.swift */; };
 		DB73CCD32BCC446C001F2489 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DB73CCD22BCC446C001F2489 /* SnapKit */; };
 		DB73CCD52BCC446C001F2489 /* SnapKit-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = DB73CCD42BCC446C001F2489 /* SnapKit-Dynamic */; };
-		DB73CCD72BCC4494001F2489 /* PagingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCD62BCC4494001F2489 /* PagingCollectionViewCell.swift */; };
+		DB73CCD72BCC4494001F2489 /* EpisodesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCD62BCC4494001F2489 /* EpisodesCell.swift */; };
 		DB73CCD92BCC44B5001F2489 /* PagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCD82BCC44B5001F2489 /* PagingView.swift */; };
 		DB73CCDC2BCC44ED001F2489 /* PagingTabBarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCDB2BCC44ED001F2489 /* PagingTabBarCell.swift */; };
 		DB73CCDF2BCC452A001F2489 /* PagingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCDE2BCC452A001F2489 /* PagingDelegate.swift */; };
-		DB73CCE12BCC5F53001F2489 /* CustomTabViewMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCE02BCC5F53001F2489 /* CustomTabViewMovieTableViewCell.swift */; };
+		DB73CCE12BCC5F53001F2489 /* EpisodesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB73CCE02BCC5F53001F2489 /* EpisodesTableViewCell.swift */; };
 		DB7D79CE2BBDA2A0005F12F8 /* ContentService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7D79CD2BBDA2A0005F12F8 /* ContentService.swift */; };
+		DBB1E2402BCFC73E005A2B52 /* OthersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBB1E23F2BCFC73E005A2B52 /* OthersCell.swift */; };
 		DBC0078F2BC1478600023272 /* SearchTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0078E2BC1478600023272 /* SearchTableCellView.swift */; };
 		DBC007992BC27EBA00023272 /* ComingSoongHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC007982BC27EBA00023272 /* ComingSoongHeaderView.swift */; };
 		DBC0079B2BC2879A00023272 /* ComingSoonTableCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC0079A2BC2879A00023272 /* ComingSoonTableCellView.swift */; };
@@ -72,12 +73,13 @@
 		DB73CCBF2BCC1926001F2489 /* SearchDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchDetailViewController.swift; sourceTree = "<group>"; };
 		DB73CCC22BCC194D001F2489 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = "../../../../../../5th_hw_KimMinhyeok 복사본/5th_hw_KimMinhyeok/controllers/searchViewController/SearchViewController.swift"; sourceTree = "<group>"; };
 		DB73CCCF2BCC3B7F001F2489 /* CustomTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewController.swift; sourceTree = "<group>"; };
-		DB73CCD62BCC4494001F2489 /* PagingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewCell.swift; sourceTree = "<group>"; };
+		DB73CCD62BCC4494001F2489 /* EpisodesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesCell.swift; sourceTree = "<group>"; };
 		DB73CCD82BCC44B5001F2489 /* PagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingView.swift; sourceTree = "<group>"; };
 		DB73CCDB2BCC44ED001F2489 /* PagingTabBarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingTabBarCell.swift; sourceTree = "<group>"; };
 		DB73CCDE2BCC452A001F2489 /* PagingDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingDelegate.swift; sourceTree = "<group>"; };
-		DB73CCE02BCC5F53001F2489 /* CustomTabViewMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabViewMovieTableViewCell.swift; sourceTree = "<group>"; };
+		DB73CCE02BCC5F53001F2489 /* EpisodesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewCell.swift; sourceTree = "<group>"; };
 		DB7D79CD2BBDA2A0005F12F8 /* ContentService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentService.swift; sourceTree = "<group>"; };
+		DBB1E23F2BCFC73E005A2B52 /* OthersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OthersCell.swift; sourceTree = "<group>"; };
 		DBC0078E2BC1478600023272 /* SearchTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableCellView.swift; sourceTree = "<group>"; };
 		DBC007982BC27EBA00023272 /* ComingSoongHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoongHeaderView.swift; sourceTree = "<group>"; };
 		DBC0079A2BC2879A00023272 /* ComingSoonTableCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComingSoonTableCellView.swift; sourceTree = "<group>"; };
@@ -164,11 +166,10 @@
 		DB73CCC62BCC2C39001F2489 /* searchDetailCustomTabView */ = {
 			isa = PBXGroup;
 			children = (
+				DBB1E23D2BCFC64B005A2B52 /* PagingCollectionCells */,
 				DB73CCCF2BCC3B7F001F2489 /* CustomTabViewController.swift */,
-				DB73CCD62BCC4494001F2489 /* PagingCollectionViewCell.swift */,
 				DB73CCD82BCC44B5001F2489 /* PagingView.swift */,
 				DB73CCDB2BCC44ED001F2489 /* PagingTabBarCell.swift */,
-				DB73CCE02BCC5F53001F2489 /* CustomTabViewMovieTableViewCell.swift */,
 			);
 			path = searchDetailCustomTabView;
 			sourceTree = "<group>";
@@ -201,6 +202,24 @@
 				DBCD8ACF2BB5903A006C23F3 /* ViewController.swift */,
 			);
 			path = controllers;
+			sourceTree = "<group>";
+		};
+		DBB1E23D2BCFC64B005A2B52 /* PagingCollectionCells */ = {
+			isa = PBXGroup;
+			children = (
+				DBB1E23E2BCFC6D0005A2B52 /* EpisodesCell */,
+				DBB1E23F2BCFC73E005A2B52 /* OthersCell.swift */,
+			);
+			path = PagingCollectionCells;
+			sourceTree = "<group>";
+		};
+		DBB1E23E2BCFC6D0005A2B52 /* EpisodesCell */ = {
+			isa = PBXGroup;
+			children = (
+				DB73CCE02BCC5F53001F2489 /* EpisodesTableViewCell.swift */,
+				DB73CCD62BCC4494001F2489 /* EpisodesCell.swift */,
+			);
+			path = EpisodesCell;
 			sourceTree = "<group>";
 		};
 		DBC0078B2BC141D400023272 /* homeViews */ = {
@@ -496,12 +515,13 @@
 			files = (
 				DBCD8AD02BB5903A006C23F3 /* ViewController.swift in Sources */,
 				DB73CCB52BCC18CF001F2489 /* HorizonButtonView.swift in Sources */,
+				DBB1E2402BCFC73E005A2B52 /* OthersCell.swift in Sources */,
 				DB73CCB62BCC18CF001F2489 /* VerticalButtonView.swift in Sources */,
-				DB73CCD72BCC4494001F2489 /* PagingCollectionViewCell.swift in Sources */,
+				DB73CCD72BCC4494001F2489 /* EpisodesCell.swift in Sources */,
 				DB73CCD92BCC44B5001F2489 /* PagingView.swift in Sources */,
 				DBCD8B1A2BB85A4B006C23F3 /* CollectionViewComponent.swift in Sources */,
 				DBCD8B1C2BB860B5006C23F3 /* SectionHeaderComponent.swift in Sources */,
-				DB73CCE12BCC5F53001F2489 /* CustomTabViewMovieTableViewCell.swift in Sources */,
+				DB73CCE12BCC5F53001F2489 /* EpisodesTableViewCell.swift in Sources */,
 				DBCD8ACC2BB5903A006C23F3 /* AppDelegate.swift in Sources */,
 				DBCD8AFE2BB6834B006C23F3 /* ContentModel.swift in Sources */,
 				DBCD8B182BB85A12006C23F3 /* HeaderComponent.swift in Sources */,
