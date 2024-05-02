@@ -54,10 +54,20 @@
 <img src="https://github.com/3rd-PARD-iOS-PART/iOS_MinhyeokKim/blob/main/5th_hw_KimMinhyeok/readme_images/dismiss.png?raw=true" width="300"/>
 <hr>
 
-### 🙊사용한 컴포넌트 설명 
-1. 이번 과제에서는 기본적으로 TableView가 searchView와 ComingSoonView에서 사용되었고, 이와 같은 이유로 TableViewCell이 사용되었습니다.<br>
-2. SearchView에서는 이번과제에서는 특별히 searchBar가 사용되었습니다.<br>
-3. 이 외의 컴포넌트는 기존과 동일하게 기본적으로 UIImageView, UILabel, UIButton이 사용되었습니다.
+### 🙊사용한 코드 설명 
+1. Search Detail (Search tap에서 cell 클릭시 이동)
+- 모달창을 이용하기 위해서 present로 이동 // present(searchDetailVC, animated: true)
+- var movieTitle: String, var movieSubtitle: String, var movieDescription: String 을 통해 셀 데이터 전달 받음
+- ScrollView 로 모달창 전체 스크롤 가능하게 함
+2. 탭뷰
+- 모달창 안에 탭바를 구현하기 위해, 또한 탭뷰가 상단에 있게 하기 위해 CollectionView 안에 TableView 사용
+- 탭바와 탭뷰를 따로 구현하여 isSelected 값을 통해 서로 통신하도록 함
+- SnapKit 사용해 봄
+- Episodes 탭은 피그마 화면대로 구현하였음. 나머지 탭은 각 탭뷰의 title 만 중앙에 출력하도록 함
+3. Episodes 탭뷰 셀
+- header 및 Episodes 탭뷰의 각 셀에는 TMDB에서 가져온 제목과 Description, Youtube에서 가져온 영상이 있음
+- Youtube 영상을 가져오고 재생하기 위해서 WKWebView을 사용하여 웹(영상 url)을 통해서 가져옴 // webView.load(URLRequest(url: url)), 해당 셀의 제목 + "trailer를 검색하여 가져오게 함
+
 <hr>
 
 ### 🙈iOS 화이팅!!!🙈
