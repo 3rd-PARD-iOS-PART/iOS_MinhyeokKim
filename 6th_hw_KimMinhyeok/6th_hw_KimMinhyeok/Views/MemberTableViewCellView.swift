@@ -21,7 +21,7 @@ class MemberTableViewCellView: UITableViewCell {
         var label = UILabel()
         label.textColor = UIColor.black
         label.text = "하이"
-        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
+        label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
@@ -31,18 +31,19 @@ class MemberTableViewCellView: UITableViewCell {
         var label = UILabel()
         label.text = "하이"
         label.textColor = UIColor.black
-        label.font = UIFont.systemFont(ofSize: 18, weight: .regular)
+        label.font = UIFont.systemFont(ofSize: 18, weight: .bold)
         label.translatesAutoresizingMaskIntoConstraints = false
         
         return label
     }()
     
     private func setupUI() {
+        self.backgroundColor = UIColor.white
+        
         contentView.addSubview(nameLabel)
         contentView.addSubview(partLabel)
         
         NSLayoutConstraint.activate([
-            
             partLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             partLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
             

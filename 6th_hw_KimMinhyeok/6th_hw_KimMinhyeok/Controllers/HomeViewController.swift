@@ -4,52 +4,55 @@
 //
 //  Created by Minhyeok Kim on 2024/05/07.
 //
-
 import UIKit
 
 class HomeViewController: UIViewController {
-    
     var members: [MemberModel] = []
     static let URL_GET_MEMBERS = "https://pard-host.onrender.com/pard"
     
     let headerView = HeaderView()
     
-    let memberTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.translatesAutoresizingMaskIntoConstraints = false
-        
-        return tableView
+    
+    let tableViewUI: UITableView = {
+        let tableVIew = UITableView()
+        tableVIew.translatesAutoresizingMaskIntoConstraints = false
+        return tableVIew
     }()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.white
-        
-        memberTableView.dataSource = self
-        memberTableView.delegate = self
-        
+        tableViewUI.dataSource = self
+        tableViewUI.delegate = self
         setUI()
         fetchMembers()
+        
+        headerView.addButton.addTarget(self, action: #selector(addButtonTapped), for: .touchUpInside)
     }
     
-    func setUI() {
+    func setUI(){
         headerView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(headerView)
-        view.addSubview(memberTableView)
+        view.addSubview(tableViewUI)
         
-        memberTableView.register(MemberTableViewCellView.self, forCellReuseIdentifier: "Cell")
+        tableViewUI.register(MemberTableViewCellView.self, forCellReuseIdentifier: "Cell")
+        
+        tableViewUI.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         
         NSLayoutConstraint.activate([
             headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             headerView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             headerView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
+            headerView.heightAnchor.constraint(equalToConstant: 50),
             
-            memberTableView.topAnchor.constraint(equalTo: headerView.bottomAnchor, constant: 10),
-            memberTableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 14),
-            memberTableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor,constant: -14),
-            memberTableView.bottomAnchor.constraint(equalTo: view.bottomAnchor),
+            tableViewUI.topAnchor.constraint(equalTo: headerView.bottomAnchor),
+            tableViewUI.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 14),
+            tableViewUI.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -14),
+            tableViewUI.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
+        
+        
     }
     
     func fetchMembers() {
@@ -68,7 +71,7 @@ class HomeViewController: UIViewController {
                     do {
                         self.members = try decoder.decode([MemberModel].self, from: JSONdata)
                         DispatchQueue.main.async {
-                            self.memberTableView.reloadData()
+                            self.tableViewUI.reloadData()
                         }
                     } catch let error as NSError {
                         print("🚨🚨🚨", error)
@@ -78,37 +81,31 @@ class HomeViewController: UIViewController {
             task.resume()
         }
     }
+    
+    @objc func addButtonTapped() {
+        let addMemberViewController = AddMemberViewController(homeViewController: self)
+        self.present(addMemberViewController, animated: true, completion: nil)
+    }
+    
 }
 
-extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("numberOfRowInSection")
-        let count = members.count
-        print(count)
-        // 데이터가 없을 때 콘솔에 메시지 출력
-        if count == 0 {
-            print("데이터가 없습니다.")
-        }
-        
-        return count
+        return members.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         print("cellForRowAt")
-        guard let cell = memberTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? MemberTableViewCellView else {
+        guard let cell = tableViewUI.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? MemberTableViewCellView else {
             return UITableViewCell()
         }
+        
         let member = members[indexPath.row]
         cell.configure(with: member)
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        print("heightForRowAt")
-        return 100
+        return 60
     }
 }
-
-
-
