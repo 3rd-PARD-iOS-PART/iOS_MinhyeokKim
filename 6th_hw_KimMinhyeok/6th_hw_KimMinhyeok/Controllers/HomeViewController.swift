@@ -108,4 +108,19 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
     }
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let member = members[indexPath.row]
+        
+        let detailViewController = DetailViewController()
+        detailViewController.member = member
+        detailViewController.homeViewController = self
+        
+        let navController = UINavigationController(rootViewController: detailViewController)
+        navController.modalPresentationStyle = .fullScreen
+        
+        present(navController, animated: true, completion: nil)
+    }
+    
 }

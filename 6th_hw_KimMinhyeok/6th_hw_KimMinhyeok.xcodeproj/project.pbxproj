@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		DB35796B2BEA74EC00A413B1 /* AddMemberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB35796A2BEA74EC00A413B1 /* AddMemberViewController.swift */; };
 		DB35796D2BEA76E300A413B1 /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB35796C2BEA76E300A413B1 /* TextFieldView.swift */; };
+		DB35796F2BEA80B200A413B1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB35796E2BEA80B200A413B1 /* DetailViewController.swift */; };
 		DB6F3CD72BEA214900744BD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6F3CD62BEA214900744BD1 /* AppDelegate.swift */; };
 		DB6F3CD92BEA214900744BD1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6F3CD82BEA214900744BD1 /* SceneDelegate.swift */; };
 		DB6F3CDB2BEA214900744BD1 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6F3CDA2BEA214900744BD1 /* HomeViewController.swift */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		DB35796A2BEA74EC00A413B1 /* AddMemberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemberViewController.swift; sourceTree = "<group>"; };
 		DB35796C2BEA76E300A413B1 /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		DB35796E2BEA80B200A413B1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		DB6F3CD32BEA214900744BD1 /* 6th_hw_KimMinhyeok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 6th_hw_KimMinhyeok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6F3CD62BEA214900744BD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB6F3CD82BEA214900744BD1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -144,6 +146,7 @@
 			children = (
 				DB6F3CDA2BEA214900744BD1 /* HomeViewController.swift */,
 				DB35796A2BEA74EC00A413B1 /* AddMemberViewController.swift */,
+				DB35796E2BEA80B200A413B1 /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB35796F2BEA80B200A413B1 /* DetailViewController.swift in Sources */,
 				DB35796B2BEA74EC00A413B1 /* AddMemberViewController.swift in Sources */,
 				DB6F3CDB2BEA214900744BD1 /* HomeViewController.swift in Sources */,
 				DB35796D2BEA76E300A413B1 /* TextFieldView.swift in Sources */,
