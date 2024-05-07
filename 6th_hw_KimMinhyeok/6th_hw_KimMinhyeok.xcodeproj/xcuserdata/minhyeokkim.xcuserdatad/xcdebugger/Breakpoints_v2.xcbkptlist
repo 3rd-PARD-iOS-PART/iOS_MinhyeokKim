@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "E86840CB-123F-4492-B335-36F41F7A9D43"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8339A08F-AB73-4117-BE16-E4E280B4C195"
+            shouldBeEnabled = "No"
+            nameForDebugger = "cellForRowAt"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "6th_hw_KimMinhyeok/Controllers/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "cellForRowAt">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+            <Locations>
+               <Location
+                  uuid = "8339A08F-AB73-4117-BE16-E4E280B4C195 - 5dd1762eb3f1606c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_th_hw_KimMinhyeok.HomeViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "6th_hw_KimMinhyeok"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhyeokkim/Desktop/Pard/iOS_MinhyeokKim/6th_hw_KimMinhyeok/6th_hw_KimMinhyeok/Controllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "460">
+               </Location>
+               <Location
+                  uuid = "8339A08F-AB73-4117-BE16-E4E280B4C195 - 5dd1762eb3f1606c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_th_hw_KimMinhyeok.HomeViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "6th_hw_KimMinhyeok"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhyeokkim/Desktop/Pard/iOS_MinhyeokKim/6th_hw_KimMinhyeok/6th_hw_KimMinhyeok/Controllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "208">
+               </Location>
+               <Location
+                  uuid = "8339A08F-AB73-4117-BE16-E4E280B4C195 - 5dd1762eb3f1606c"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "_th_hw_KimMinhyeok.HomeViewController.tableView(_: __C.UITableView, cellForRowAt: Foundation.IndexPath) -&gt; __C.UITableViewCell"
+                  moduleName = "6th_hw_KimMinhyeok"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/minhyeokkim/Desktop/Pard/iOS_MinhyeokKim/6th_hw_KimMinhyeok/6th_hw_KimMinhyeok/Controllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "96"
+                  endingLineNumber = "96"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A7DAE7A4-B8F0-4565-9FB6-1C7DEEF8686C"
+            shouldBeEnabled = "No"
+            condition = "heightForRowAt"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "6th_hw_KimMinhyeok/Controllers/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "tableView(_:heightForRowAt:)"
+            landmarkType = "7">
+            <Actions>
+               <BreakpointActionProxy
+                  ActionExtensionID = "Xcode.BreakpointAction.DebuggerCommand">
+                  <ActionContent
+                     consoleCommand = "heightForRowAt">
+                  </ActionContent>
+               </BreakpointActionProxy>
+            </Actions>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
