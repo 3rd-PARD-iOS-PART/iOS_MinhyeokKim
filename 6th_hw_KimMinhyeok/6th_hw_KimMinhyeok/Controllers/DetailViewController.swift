@@ -58,8 +58,8 @@ class DetailViewController: UIViewController {
         ])
     }
     
+    // Delete 버튼 동작 구현
     @objc func deleteButtonTapped() {
-        // Delete 버튼 동작 구현
         let alertController = UIAlertController(title: "정말로 삭제하시겠습니까?", message: "삭제한 내용은 다시 되돌릴 수 없습니다.", preferredStyle: .alert)
         
         let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
@@ -77,8 +77,8 @@ class DetailViewController: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
+    // Edit 버튼 동작 구현
     @objc func editButtonTapped() {
-        // Edit 버튼 동작 구현
         // 아무 동작 없음
     }
     
@@ -93,7 +93,7 @@ class DetailViewController: UIViewController {
         
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             if let error = error {
-                print("Error deleting member: \(error)")
+                print("🚨🚨🚨 Error deleting member: \(error)")
                 return
             }
             

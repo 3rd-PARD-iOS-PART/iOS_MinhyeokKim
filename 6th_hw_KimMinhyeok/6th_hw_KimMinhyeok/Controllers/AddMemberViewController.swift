@@ -67,7 +67,9 @@ class AddMemberViewController: UIViewController {
         ])
     }
     
+    // 추가 Button 설정
     @objc func submitButtonTapped() {
+        // submit validation 설정
         guard let name = nameTextField.text, !name.isEmpty,
               let ageText = ageTextField.text, let age = Int(ageText), age > 0,
               let part = partTextField.text, !part.isEmpty else {
@@ -80,6 +82,7 @@ class AddMemberViewController: UIViewController {
         postMemberData(newMember)
     }
     
+    // 멤버 추가
     func postMemberData(_ member: MemberModel) {
         guard let url = URL(string: AddMemberViewController.URL_POST_MEMBERS) else {
             return
@@ -116,6 +119,7 @@ class AddMemberViewController: UIViewController {
 }
 
 extension UIViewController {
+    // toast
     func showToast(message: String) {
         let toastLabel = UILabel()
         toastLabel.text = message

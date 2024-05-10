@@ -55,6 +55,7 @@ class HomeViewController: UIViewController {
         
     }
     
+    // 멤버 가져오기
     func fetchMembers() {
         if let url = URL(string: HomeViewController.URL_GET_MEMBERS) {
             let session = URLSession(configuration: .default)
@@ -82,6 +83,7 @@ class HomeViewController: UIViewController {
         }
     }
     
+    // 추가 페이지 모달 이동
     @objc func addButtonTapped() {
         let addMemberViewController = AddMemberViewController(homeViewController: self)
         self.present(addMemberViewController, animated: true, completion: nil)
@@ -89,6 +91,7 @@ class HomeViewController: UIViewController {
     
 }
 
+// tableView 설정
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return members.count
