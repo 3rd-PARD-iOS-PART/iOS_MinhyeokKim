@@ -1,8 +1,8 @@
 //
 //  TextFieldView.swift
-//  6th_hw_KimMinhyeok
+//  7th_hw_KimMinhyeok
 //
-//  Created by Minhyeok Kim on 2024/05/07.
+//  Created by Minhyeok Kim on 2024/05/11.
 //
 
 import UIKit
@@ -32,3 +32,4 @@ class TextFieldView: UITextField {
         self.text = hint
     }
 }
+

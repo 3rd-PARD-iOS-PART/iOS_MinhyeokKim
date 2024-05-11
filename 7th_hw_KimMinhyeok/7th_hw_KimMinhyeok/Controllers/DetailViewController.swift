@@ -1,16 +1,15 @@
 //
 //  DetailViewController.swift
-//  6th_hw_KimMinhyeok
+//  7th_hw_KimMinhyeok
 //
-//  Created by Minhyeok Kim on 2024/05/08.
+//  Created by Minhyeok Kim on 2024/05/11.
 //
 
 import UIKit
 
 class DetailViewController: UIViewController {
     
-    static let URL_DELETE_MEMBERS = "https://pard-host.onrender.com/pard/"
-    
+    var memberId: Int?
     var member: MemberModel?
     var homeViewController: HomeViewController?
     
@@ -18,9 +17,26 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         
-        setupUI()
+        if let memberId = memberId {
+            fetchMemberById(memberId: memberId)
+        }
     }
     
+    func fetchMemberById(memberId: Int) {
+        PardAPIController.shared.getMemberById(memberId: memberId) { member, error in
+            if let error = error {
+                print("Error fetching member: \(error)")
+                return
+            }
+            
+            if let member = member {
+                self.member = member
+                DispatchQueue.main.async {
+                    self.setupUI()
+                }
+            }
+        }
+    }
     func setupUI() {
         let deleteButton = UIBarButtonItem(title: "Delete", style: .plain, target: self, action: #selector(deleteButtonTapped))
         navigationItem.leftBarButtonItem = deleteButton
@@ -65,8 +81,8 @@ class DetailViewController: UIViewController {
         let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
         let deleteAction = UIAlertAction(title: "확인", style: .destructive) { _ in
             // 확인 버튼을 누르면 해당 멤버를 삭제하고 홈 뷰를 업데이트
-            if let member = self.member {
-                self.deleteMember(member)
+            if let memberId = self.memberId {
+                self.deleteMember(memberId: memberId)
             }
             self.dismiss(animated: true, completion: nil)
         }
@@ -82,27 +98,19 @@ class DetailViewController: UIViewController {
         // 아무 동작 없음
     }
     
-    func deleteMember(_ member: MemberModel) {
-        guard let id = member.id else { return }
-        let urlString = "\(DetailViewController.URL_DELETE_MEMBERS)\(id)"
-        
-        guard let url = URL(string: urlString) else { return }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "DELETE"
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+    func deleteMember(memberId: Int) {
+        PardAPIController.shared.deleteMemberById(memberId: memberId) { error in
             if let error = error {
-                print("🚨🚨🚨 Error deleting member: \(error)")
+                print("Error deleting member: \(error)")
                 return
             }
             
-            // 성공적으로 삭제된 경우, 홈 뷰를 업데이트
             DispatchQueue.main.async {
                 self.homeViewController?.fetchMembers()
+                self.dismiss(animated: true, completion: nil)
             }
         }
-        task.resume()
     }
 }
+
 
